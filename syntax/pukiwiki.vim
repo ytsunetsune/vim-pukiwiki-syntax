@@ -22,7 +22,7 @@ syntax match  andcomm  '&.\+;\|&.\+(.\+);\|&.\+(.\+){.\+};'
 syntax match  bolds    '"[^"]\+"\{1}'
 syntax match  italics  '"".\+""'
 syntax match  kyocho   '%%.\+%%\|((.\+))'
-syntax match  link     '\[\{2}.\+\[\{2}'
+syntax match  link     '\[\{2}.\+\]\{2}'
 
 " 構文に対するハイライトの割り当て
 highlight midashi1 guifg=#8aae80
@@ -38,7 +38,7 @@ highlight link inyou   String
 highlight link table   Special
 highlight link comment Comment
 highlight link kyocho  Constant
-highlight link link    Constant
+highlight link link    Underlined
 highlight link code    String
 highlight link sharp   Statement
 highlight link andcomm Statement
