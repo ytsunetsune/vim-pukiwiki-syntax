@@ -14,9 +14,9 @@ syntax region sharp    start=+^\s*#.\++ end=+$+
 syntax region comment  start=+^//+      end=+$+
 syntax region code     start=+^\s\{1}.+ end=+$+
 syntax match  line     '^-\{-4,}$'
-syntax match  list1    '^-\{1}[^-]\|^+\{1}\|^:'
-syntax match  list2    '^-\{2}[^-]\|^+\{2}'
-syntax match  list3    '^-\{3}[^-]\|^+\{3}'
+syntax match  list1    '^\(-\|+\)\{1}\ze[^-]\+\|^:'
+syntax match  list2    '^\(-\|+\)\{2}\ze[^-]\+'
+syntax match  list3    '^\(-\|+\)\{3}\ze[^-]\+'
 syntax match  cr       '\~$'
 syntax match  andcomm  '&.\+;\|&.\+(.\+);\|&.\+(.\+){.\+};'
 syntax match  bolds    '"[^"]\+"\{1}'
